@@ -51,7 +51,8 @@ body {
     color: var(--text-color);
     /* background-color: var(--bg-color); */
     max-width: 34rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: 2rem;
     padding: 1rem 1rem;
     font-size: 16px;
     text-align: justify;

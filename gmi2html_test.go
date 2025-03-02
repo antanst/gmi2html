@@ -61,7 +61,7 @@ func TestConvertGeminiContent(t *testing.T) {
 
 func TestGmi2html(t *testing.T) {
 	sample := "# Hello Gemini\n\nThis is a test document.\n\n=> https://gemini.circumlunar.space/ Project Gemini"
-	result := Gmi2html(sample, "Gemini Test")
+	result, _ := Gmi2html(sample, "Gemini Test")
 
 	// Check that it contains the expected elements
 	if !strings.Contains(result, "<title>Gemini Test</title>") {
