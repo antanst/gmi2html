@@ -16,7 +16,7 @@ clean:
 
 # Test
 test:
-	go test -race ./...
+	go test ./...
 
 tidy:
 	go mod tidy
@@ -36,7 +36,10 @@ lintfix: fmt
 
 build: clean
 	mkdir ./dist
-	go build -race -o ./dist/gmi2html ./bin/gmi2html/gmi2html.go
+	go build -o ./dist/gmi2html ./bin/gmi2html/gmi2html.go
+
+build-gccgo: clean
+	go build -compiler=gccgo -o ./dist/gmi2html ./bin/gmi2html/gmi2html.go
 
 show-updates:
 	go list -m -u all
