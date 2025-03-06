@@ -22,7 +22,7 @@ func runApp() error {
 		return err
 	}
 
-	html, err := gmi2html.Gmi2html(string(data), "")
+	html, err := gmi2html.Gmi2html(string(data), "", false)
 	if err != nil {
 		return err
 	}

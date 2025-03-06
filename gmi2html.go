@@ -12,10 +12,13 @@ import (
 // Based on https://geminiprotocol.net/docs/gemtext-specification.gmi
 
 // Gmi2html converts Gemini text to HTML with proper escaping and wraps it in a container with typography-focused CSS
-func Gmi2html(text string, title string) (string, error) {
+func Gmi2html(text string, title string, contentOnly bool) (string, error) {
 	content := convertGeminiContent(text)
 
-	// Handle any template errors with container
+	if contentOnly {
+		return content, nil
+	}
+
 	var buffer bytes.Buffer
 	err := containerTmpl.Execute(&buffer, struct {
 		Title   string
