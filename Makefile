@@ -36,10 +36,10 @@ lintfix: fmt
 
 build: clean
 	mkdir ./dist
-	go build -o ./dist/gmi2html ./bin/gmi2html/gmi2html.go
+	go build -o ./dist/gmi2html ./cmd/gmi2html
 
 build-gccgo: clean
-	go build -compiler=gccgo -o ./dist/gmi2html ./bin/gmi2html/gmi2html.go
+	go build -compiler=gccgo -o ./dist/gmi2html ./cmd/gmi2html
 
 show-updates:
 	go list -m -u all

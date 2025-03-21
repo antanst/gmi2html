@@ -4,45 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --text-color: #333;
-            --bg-color: #fff;
-            --link-color: #0066cc;
-            --link-hover: #004080;
-            --quote-bg: #f5f5f5;
-            --quote-border: #ddd;
-            --pre-bg: #f8f8f8;
-            --pre-border: #eaeaea;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-color: #eee;
-                --bg-color: #292929;
-                --link-color: #4a9eff;
-                --link-hover: #77b6ff;
-                --quote-bg: #333;
-                --quote-border: #444;
-                --pre-bg: #2a2a2a;
-                --pre-border: #3a3a3a;
-            }
-        }
+      :root {
+          --text-color: #eee;
+          --bg-color: #292929;
+          --link-color: #4a9eff;
+          --link-hover: #77b6ff;
+          --quote-bg: #333;
+          --quote-border: #444;
+          --pre-bg: #2a2a2a;
+          --pre-border: #3a3a3a;
+      }
 
         body {
-            font-family: "Source Serif Pro", "Georgia", "Cambria", serif;
+            font-family: "Source Code Pro", monospace;
+            font-weight: 300;
+            font-size: 14px;
             color: var(--text-color);
-            /* background-color: var(--bg-color); */
+            background-color: var(--bg-color);
             max-width: 34rem;
-            /* margin: 0 auto; */
-            margin-left: 2rem;
+            amargin: 0 auto;
+            amargin-left: 2rem;
             padding: 1rem 1rem;
-            font-size: 16px;
-            text-align: justify;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
+            atext-align: justify;
+            ahyphens: auto;
+            a-webkit-hyphens: auto;
+            a-ms-hyphens: auto;
         }
 
         .gemini-container {
