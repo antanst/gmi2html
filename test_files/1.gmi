@@ -1,0 +1,96 @@
+#  pollux.casa 🟊.⌂
+
+```ascii-art pollux.casa
+ _______ _______ ___     ___     __   __ __   __           ___
+|       |       |   |   |   |   |  | |  |  |_|  |         /   \
+|    _  |   _   |   |   |   |   |  | |  |       |        /     \
+|   |_| |  | |  |   |   |   |   |  |_|  |       |       / _   _ \
+|    ___|  |_|  |   |___|   |___|       ||     |   ___  ||_| |_||
+|   |   |       |       |       |       |   _   | |   | |   _   |
+|___|   |_______|_______|_______|_______|__| |__| |___| |__|_|__|
+```
+
+=> /index.fr.gmi 🏳️ Version française
+
+## A gemini capsules free hosting
+You want to create a gemini capsule, but do not want to manage a server?
+You're welcome !
+
+This service is proposed and managed by Adële
+=> gemini://adele.pollux.casa/ Adële's capsule
+
+If your "pseudo" is still available, your capsule will be created and reachable on this address:
+```
+    gemini://"pseudo".pollux.casa/
+```
+Also accessible in http/https if you want to share with persons that do not know gemini yet:
+```
+    https://"pseudo".pollux.casa/
+```
+
+Go on board, it will 🚀
+=> requestaccount.gmi How to request an account
+=> content.gmi How to edit your gemini capsule content
+
+## News
+=> /gemlog/ news gemlog
+
+## Why pollux.casa domain name?
+* 🟊 Pollux, because it is one of main stars in Gemini constellation
+* ⌂ Casa, because it will become your home in this constellation
+
+## Hardware & software
+pollux.casa is hosted on a small Intel NUC machine
+* Processor Celeron N2830 @2.16GHz (64bits)
+* 4 Gb RAM
+* Disk SATA 1 Tb (5400rpm)
+* ADSL connection 6Mb/s up and 23Mb/s down
+* OS Archlinux
+* Gemserv Gemini server & Lighttpd + Ergol-http
+
+=> img/nuc.jpg pollux.casa server !
+
+## Charter and policy
+This service is offered freely without service guarantee. However, this service will be supplied in accordance to the Charter of CHATONS.
+
+CHATONS is a collective of independant, transparent, open, neutral and ethical hosters providing FLOSS-based online services.
+
+=> https://www.chatons.org/en/manifeste Manifesto of CHATONS
+=> https://www.chatons.org/en/charte Charter of CHATONS
+
+pollux.casa is not an official entity so, it cannot officially be member of CHATONS.
+
+I'm French and lives in France, so French laws will be applied to this service.
+
+## Free to leave pollux.casa
+If you decide to self-host your capsule, it is possible download your capsule (of course, you have uploaded it) and to redirect "pseudo.pollux.casa" to your own domain and machine. I'll be happy to have helped you to start gemini experience.
+
+## Contact
+You can join me on the Fediverse:
+=> https://social.pollux.casa/@adele @adele@social.pollux.casa
+Or by email:
+=> /adele_at_pollux.casa.pub.asc get openpgp pub key of adele(at)pollux.casa
+
+
+``` asci-art astronaut
+        _____
+      ./     \.      _
+     /    .-""-\   _/ \
+   .-|   /:.   |  |   |
+   |  \  |:.   /.-'-./
+   | .-'-;:__.'    =/
+   .'=  *=|     _.='
+  /   _.  | 🚀 ;
+ ;-.-'|    \   |
+/   | \    _\  _\
+\__/'._;.  ==' ==\
+         \    \   |
+         /    /   /
+         /-._/-._/
+         \   `\  \
+          `-._/._/
+```
+                                                                                                                                                                                                                                                  │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Time: 2.569 ms
