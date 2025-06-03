@@ -1,4 +1,4 @@
-SHELL := /bin/env oksh
+SHELL := /bin/sh
 export PATH := $(PATH)
 
 all: fmt lintfix tidy test clean build

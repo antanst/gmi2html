@@ -1,3 +1,3 @@
-module github.com/antanst/gmi2html
+module git.antanst.com/antanst/gmi2html
 
 go 1.21

@@ -48,10 +48,7 @@ func convertGeminiContent(text string, replaceGmiExt bool) string {
 	normalMode := true
 
 	for _, line := range lines {
-		switch {
-		case strings.HasPrefix(line, "=>"):
-			handleLinkLine(&buffer, line, replaceGmiExt)
-		case strings.HasPrefix(line, "```"):
+		if strings.HasPrefix(line, "```") {
 			if normalMode {
 				err := preformattedTmplStart.Execute(&buffer, line)
 				if err != nil {
@@ -65,7 +62,21 @@ func convertGeminiContent(text string, replaceGmiExt bool) string {
 				}
 			}
 			normalMode = !normalMode
-			// Don't output the ``` line
+			// Don't output the ``` line itself
+			continue
+		}
+
+		if !normalMode {
+			// Inside preformatted block - output line directly with HTML escaping
+			buffer.WriteString(template.HTMLEscapeString(line))
+			buffer.WriteString("\n")
+			continue
+		}
+
+		// Normal mode - process gemini markup
+		switch {
+		case strings.HasPrefix(line, "=>"):
+			handleLinkLine(&buffer, line, replaceGmiExt)
 		case strings.HasPrefix(line, "###"):
 			content := strings.TrimSpace(strings.TrimPrefix(line, "###"))
 			err := h3Tmpl.Execute(&buffer, content)
@@ -97,14 +108,9 @@ func convertGeminiContent(text string, replaceGmiExt bool) string {
 				return ""
 			}
 		default:
-			if normalMode {
-				err := textLineTmpl.Execute(&buffer, line)
-				if err != nil {
-					return ""
-				}
-			} else {
-				buffer.WriteString(line)
-				buffer.WriteString("\n")
+			err := textLineTmpl.Execute(&buffer, line)
+			if err != nil {
+				return ""
 			}
 		}
 	}

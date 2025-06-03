@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/antanst/gmi2html/pkg/gmi2html"
+	"git.antanst.com/antanst/gmi2html"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	flag.Parse()
 	err := runApp(*noContainer, *replaceGmiExt)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
