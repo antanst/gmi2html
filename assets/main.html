@@ -9,18 +9,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <style>
       :root {
-          --text-color: #eee;
-          --bg-color: #292929;
-          --link-color: #4a9eff;
-          --link-hover: #77b6ff;
-          --quote-bg: #333;
-          --quote-border: #444;
-          --pre-bg: #2a2a2a;
-          --pre-border: #3a3a3a;
+          --text-color: #333;
+          --bg-color: #ffffff;
+          --link-color: #0066cc;
+          --link-hover: #0052a3;
+          --quote-bg: #f5f5f5;
+          --quote-border: #ddd;
+          --pre-bg: #f8f8f8;
+          --pre-border: #e1e1e1;
+      }
+
+      @media (prefers-color-scheme: dark) {
+          :root {
+              --text-color: #e0e0e0;
+              --bg-color: #1a1a1a;
+              --link-color: #66a3ff;
+              --link-hover: #87b5ff;
+              --quote-bg: #2a2a2a;
+              --quote-border: #444;
+              --pre-bg: #252525;
+              --pre-border: #3a3a3a;
+          }
       }
 
         body {
-            font-family: "Source Serif Pro", serif;
+            font-family: serif;
             /* font-weight: 300; */
             font-size: 16px;
             color: var(--text-color);
@@ -97,7 +110,6 @@
         }
 
         .gemini-preformatted {
-	    font-family: "Source Code Pro", monospace !important;
             background-color: var(--pre-bg);
             border: 1px solid var(--pre-border);
             border-radius: 3px;

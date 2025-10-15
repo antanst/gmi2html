@@ -8,7 +8,6 @@ debug:
 	@echo "GOPATH: $(shell go env GOPATH)"
 	@which go
 	@which gofumpt
-	@which gci
 	@which golangci-lint
 
 clean:
@@ -24,7 +23,6 @@ tidy:
 # Format code
 fmt:
 	gofumpt -l -w .
-	gci write .
 
 # Run linter
 lint: fmt

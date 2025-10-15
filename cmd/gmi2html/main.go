@@ -11,7 +11,7 @@ import (
 
 func main() {
 	noContainer := flag.Bool("no-container", false, "Don't output container HTML")
-	replaceGmiExt := flag.Bool("replace-gmi-ext", false, "Replace .gmi extension with .html in links")
+	replaceGmiExt := flag.Bool("replace-gmi-ext", false, "In links, replace original .gmi extension with .html")
 	flag.Parse()
 	err := runApp(*noContainer, *replaceGmiExt)
 	if err != nil {
